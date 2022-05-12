@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Criando estilos internos na nossa página html -->
+
+    <style>
+        /* gerando css da primeira forma: nativo, seleciono minha tag dentro de Style, no caso aqui é o H1 , e coloco minhas especificações e estas serão aplicadas em todas as tags H1  */
+
+        h1 {
+            font-size: 18px;
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* gerando css da segunda forma: por classe, perceba que eu criei a classe no body e chamei ela aqui e dei as especificações que eu queria e que só serão aplicadas nas tags que tiverem o class=".cab_especial" como atributo, nos demais h1 serão aplicadas as configurações padrão da tag Style */
+
+        .cab_especial {
+            background-color: green;
+            font-size: 16px;
+            font-weight: bolder;
+            color: yellow;
+        }
+
+        /* gerando css da terceira forma: para um ID */
+
+        #cadastro {
+            color: purple;
+            font-size: 17px;
+        }
+
+        .format_campos {
+            background-color: rgb(139, 184, 243);
+            font-size: 16px;
+            font-weight: bolder;
+            color: rgb(255, 60, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Super formulário de cadastro de alunsos x cursos da gama academy</h1>
+
+    <h1 class="cab_especial">Conheça todos os nossos cursos</h1>
+
+    <h1>Sou um cabeçalho perdido</h1>
+
+    <!-- Quando que eu utilizo ID ou class? -->
+
+    <!-- Criando um formulário -->
+
+    <form id="cadastro" method="post">
+        <label>Nome Aluno:</label>
+        <input type="text" name="nome_aluno" class="format_campos" placeholder="Digite o seu nome" required> <br><br>
+        <label>Email Aluno:</label>
+        <input type="email" name="email_aluno" class="format_campos" placeholder="Digite o seu email" required>
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>

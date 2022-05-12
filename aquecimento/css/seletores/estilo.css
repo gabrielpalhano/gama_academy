@@ -1,0 +1,45 @@
+* {
+    color: darkviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* #primeiro {
+    border: 1px solid yellow;
+    margin: 30px;
+}
+
+#segundo {
+    border: 5px solid rgb(216, 216, 5);
+    padding: 15px;
+} */
+
+.navigation nav span {
+    color: black;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.navigation nav span:hover {
+    text-decoration: underline;
+    color: indigo;
+    background-color: blueviolet;
+}
+
+/* você pode colocar os elementos um do lado do outro ou dar enter e colocar um em baixo do outro também*/
+#primeiro, .segundo, 
+.navigation {
+    border: 5px solid darkviolet;
+    padding: 15px;
+    margin: 5px;
+}
+
+.segundo > p {
+    color: yellowgreen;
+} /* Se você usar > que p você está dizendo que quer mudar apenas os filhos diretos da classe .segundo, os demais são filhos da div, como se fossem netos do .segundo */
+
+.segundo > div {
+    display: block !important;
+}
+/*Sem o comando !important, nossos lorem não iriam aparecer pois o estilo inline que está lá no html (display:none) tem prioridade, mas ao usar o !important você atribui prioridade máxima ao comando*/
